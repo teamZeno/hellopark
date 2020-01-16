@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+            function myfun(fn,fm){
+
+                var ob = {"fn":fn,"fm":fm};
+                var job = JSON.stringify(ob);
+                console.log(job);
+
+                var http = new XMLHttpRequest();
+                http.onreadystatechange = function(){
+
+                console.log(this.status);
+                console.log(this.statusText);
+                
+                if(this.readyState == 4 && this.status == 200){
+
+                        // var obj = JSON.parse(this.responseText);
+                        // document.getElementById("as").innerHTML = obj.fn;
+                        // document.getElementById("ad").innerHTML = obj.fm;
+
+                        document.getElementById("ad").innerHTML = this.statusText;
+                }else if(this.readyState == 4 && this.status == 404){
+                    document.getElementById("ad").innerHTML = "Page Not Found";
+                    console.log(this.statusText);
+                }
+
+            };
+
+                http.open("POST","t.php",true);
+                http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                http.send("f="+job);
+            }
+            
+    </script>
+
+    <button onclick="myfun('Chathuranga','Hiru')"> Click </button>
+    <div id = "as"></div>
+    <div id = "ad"></div>
+
+
+</body>
+</html>

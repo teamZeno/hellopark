@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/input_design.css" type="text/css"/>
+    <title>Sign In</title>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">HelloPark</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup.html">Become Provider</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="signup.html" tabindex="-1" aria-disabled="true">Become Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="signIn.html">Login In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <div>
+        <p class="mar txt-72 txt-center">Sign In</p>
+    </div>
+
+    <div class="mar" style="padding:1%;margin:1%;">
+        <!-- Customer Sign In -->
+        <div style="width:45%;padding:16px;float: left;" class="card mar shadow p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <div class="mar txt-36"> Customer </div>
+                <form method = "POST" name="cus_signIn" action="javascript:signInCus()">
+                    <div class="form_group p-2">
+                            <div>
+                                <input class="mar form-control" type = "text" name = "cus_id" placeholder = "User Id" required >
+                            </div>
+
+                            <div>
+                                <input class="mar form-control" type = "password" name = "cus_psw" placeholder = "Password" required>
+                            </div>
+
+                            <div>
+                                <input class = " mar btn btn-success" type = "submit" name = "cus_btn" value = "Sign In">
+                            </div>
+
+                            <div>
+                                <p class="mar"> Aren't you a customer yet? <a href = "signup.html">Sign Up</a> </p>
+                            </div>
+                    </div>
+        
+                </form>
+            </div>
+        </div>
+
+        <!-- Provider Sign In -->
+        <div style="width:45%;padding:16px;float:right" class="card mar shadow p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <div class="mar txt-36"> Provider </div>
+
+                <form method = "POST" action = "javascript:onSignInPro()" name="pro_signIn">
+                    
+                    <div class="form-group p-2">   
+                        <div>
+                            <input class="mar form-control" type = "text" name = "pr_id" placeholder = "User Id" required >
+                        </div>
+
+                        <div>
+                            <input class="mar form-control" type = "password" name = "pr_psw" placeholder = "Password" required>
+                        </div>
+
+                        <div>
+                            <input class="mar btn btn-success" type = "submit" name = "pr_btn" value = "Sign In">
+                        </div>
+
+                        <div>
+                            <p class="mar"> Aren't you a Provider yet? <a href = "signup.html"> Sign Up </a> </p>
+                        </div>
+
+                    </div> 
+        
+                </form>
+
+            
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="./js/signIn.js"></script>
+
+
+</body>
+</html>

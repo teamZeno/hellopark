@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/geoloc.css" type="text/css"/>
+    <title>DashBoard - Customer</title>
+
+    <style>
+        input{
+            margin:8px;
+        }
+
+        table{
+            width: 50%;
+        }
+
+        th,td{
+            padding-left: 16px;
+        }
+
+        #tb_{
+            width: 100%;
+        }
+
+       
+    </style>
+
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">HelloPark</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup.html">Become Provider</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="signup.html" tabindex="-1" aria-disabled="true">Become Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="signIn.html">Login In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <!-- User Details view -->
+    <!--
+    <div>
+        <label>User Id:<label id="user_id">000</label></label>
+    </div>
+    <div>
+        <label>User Name:<label id = "user_name">ABC</label></label>
+    </div>
+    -->
+  
+    <!-- Searching Part-->
+    <div class="float-left">
+        <p class="display-4 m-5">Search Your Parking Place</p>
+
+        <div class="form-group m-5" style="width:50%;">
+        <form method="POST" name="search_park_pl" action="javascript:searchPlace()">
+            <div>
+                <input class="form-control m-3 p-4 rounded-pill" type="text" name="distric" placeholder="Distric">
+                <input class="form-control m-3 p-4 rounded-pill" type="text" name="city" placeholder="City">
+            </div>
+
+            <div>
+                <input class="btn btn-primary m-3 p-2 rounded-pill" style="width:50%;" type ="submit" name="ser_submit" value="search" >
+            </div>
+
+        </form>
+         </div>
+    </div>
+
+    <div class="float-right m-4" id="map" ></div>
+
+    <!-- Parking Details View -->
+    <div style="clear: both;" class="m-4" >
+        <div>
+                <p class="display-4 m-5"> Your Parking Places</p>
+        </div>
+        
+    <!-- Details Table -->   
+        <div id="tb_" class="m-5">
+                <table id="_t_tb">
+                    <tr> 
+                        <td><p class="display-5">Place</p></td>
+                        <td><p class="display-5">Address</p></td>
+                        <td><p class="display-5">Ava: Slots</p></td>
+                    </tr>
+
+                    <tr class="tr_"> 
+                        <td rowspan="3">No Data </td>
+                    </tr>  
+        
+                </table>
+        </div>
+        
+    </div>
+
+    <div id="panel"></div>
+
+  <!-- Map appears here -->
+  
+
+    <script src="./js/geoloc.js"></script>
+   <script src="./js/main_pageCus.js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXu6pULPGybodsNLK28MD-8Djj1iJKVg&libraries=places&callback=initMap">
+   </script>
+  
+
+
+</body>
+</html>

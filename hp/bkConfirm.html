@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <title>DashBoard - Customer</title>
+
+    <style>
+        input{
+            margin:8px;
+        }
+
+        table{
+            width: 50%;
+        }
+
+        th,td{
+            padding-left: 16px;
+        }
+
+        #tb_{
+            width: 100%;
+        }
+
+        .tr_{
+            margin:16px;
+            border:2px solid black;
+            border-radius: 50%;
+        }
+
+        #suc_{
+            padding:5%;
+            position: fixed;
+            top: 0px;
+            background-color:rgba(0,0,0,0.6);
+            width:100%;
+            display:none;
+        }
+
+        #suc_div{
+            margin:10%;
+            padding:5%;
+            background-color:rgba(255,255,255,1);
+        }
+
+        .pa-16-8{
+            padding:16px;
+            margin:8px;
+            border:2px solid black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">HelloPark</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Become Provider</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Become Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Login In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <!-- User Details view -->
+    <h2 class="text-center m-5 display-4"> Confirm Booking </h2>
+
+    <div style="display:none;">
+        <p>User:<label id="u_name">ABC</label></p>
+        <p>UserId:<label id="u_id">ABC</label></p>
+    </div>
+  
+    <!-- Booking Details -->
+    <div class="form-group" style="margin:2% 10%;">
+        <div class="pa-16-8">
+            <label >Ref No:<label id="ref_no">000-000-000<label>
+        </div>
+
+        <div class="pa-16-8">
+            <label>Parking Place: <label id="bk_parkName">ABC Parking</label></label>
+        </div>
+
+        <div class="pa-16-8">
+            <label>Slot Name: <label id="bk_stN">000</label></label>
+        </div>
+
+        <div class="pa-16-8">
+            <label>To (Time): <label id = "bk_tTime">000-000-000</label></label>
+        </div>
+        
+        <div class="pa-16-8">
+            <label>From (Time): <label id="bk_fTime">000-000-000</label></label>
+        </div>
+
+        <div class="pa-16-8">
+            <label>Duration: <label id="bk_dur">000-000-000</label></label>
+        </div class="pa-16-8">
+
+        <div class="pa-16-8">
+            <label>Charges (LKR): <label id="bk_char">000</label></label>
+        </div>
+
+        <div>
+            <button class="btn btn-success m-3" onclick="confirmBook()"> Confirm </button>
+        </div>
+       
+        <div>
+            <button class="btn btn-danger m-3"> Cancel </button>
+        </div>
+    </div>
+
+    <div id="suc_">
+        <div id="suc_div">
+            <h2>Success</h2>
+            <p>Your booking is confirmed successfully and check your email for further Details</p>
+            <button onclick="doneBtn()">Done</button>
+        </div>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script src="./js/bkConfirm.js"></script>
+   
+</body>
+</html>

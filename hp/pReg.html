@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <title>Registration</title>
+
+    <style>
+    
+        input{
+            margin:8px;
+        }
+    
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">HelloPark</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Become Provider</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Become Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Login In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+	<br>
+    <div>
+	<h1 style="text-align:center;">Registration</h1>
+    </div>
+
+    <!-- Land Registration Form -->
+    <div>
+        <h6>Land Details</h6>
+    <div></div>
+    
+        <form action="javascript:onregLand()" method="POST">
+            <hr style="border-width: 2px;border-color: black;"></hr>
+            
+
+            <!--Land Name-->
+            <div style="width: 50%;">
+                
+                    <input type="text" name = "ln_name"placeholder="Land Name"class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                
+            </div>
+            
+             <!-- Land Reg No -->
+            <div style="width: 50%;">
+               
+                    <input type="text" name = "ln_regNo" placeholder="Land Reg. No" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+            </div>
+
+             <!-- Land #pr -->
+            <div style="width: 50%;">
+                
+                <input type="text" name = "ln_#pr" placeholder="No of Preches" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+            </div>
+
+             <!-- Land address -->
+            <div style="width: 50%;">
+               
+                <input type="text" name = "ln_ad" placeholder="Address"  class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+            </div>
+
+             <!-- Land #slot-->
+            <div style="width: 50%;">
+                
+                <input type="text" name = "ln_#slot" placeholder="No of Slots" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+            </div>
+
+            <!--
+            <div style="width: 50%;">
+                Map of Land:<br>
+                <input type="file" name = "ln_map" placeholder="Map of Land" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;">
+            </div>
+        -->
+
+            <div style=text-align:center>
+                <input type="submit" name = "ln_submit" value="Register" class="btn btn-success ;rounded-pill">
+            </div>
+
+        </form>
+    
+    </div>
+
+    <!-- Owner Registration Form -->
+    <div style="margin-top:28px;">
+            <h6>Owner Details</h6>
+            <form action="javascript:onOwneReg()" method="POST">
+                <hr style="border-width: 2px;border-color: black;"></hr>
+                <!-- Owner full name -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_fname" placeholder="Full Name" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+                
+                <!-- Owner initial Name -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_iniName" placeholder="Initial with Name" class= "rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+    
+                <!-- Owner Nic -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_nic" placeholder="NIC" class= "rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+    
+                <!-- Owner address -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_ad" placeholder="Address" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+    
+                <!-- Owner Mobile Number -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_mobNum" placeholder="Mobile Number" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+    
+                <!-- Owner email -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_email" placeholder="Email" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+                
+                <div style="width: 50%;">
+                    <p>Payment Details</p>
+                </div>
+
+                <!-- Owner Bank -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_bank" placeholder="Bank" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+
+                <!-- Owner branch -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_branch" placeholder="Branch" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;" required>
+                </div>
+
+                <!-- Owner account No -->
+                <div style="width: 50%;">
+                    <input type="text" name = "own_accNo" placeholder="Account No" class="rounded-pill" style="width:80%;padding-left: 25px; border-style:solid;border-width:thin;border-color:black;"required>
+                </div>
+
+                <!-- Owner submit btn -->
+                <div style="text-align:center">
+                    <input type="submit" name = "own_submit" value="Register" class="btn btn-success ;rounded-pill" >
+                </div>
+            </form>
+    </div>
+    
+    <script>
+        function onOwneReg(){
+            alert("Owner registered into system successfully");
+        }
+
+        function onregLand(){
+            alert("Land registered into system successfully");
+        }
+
+    </script>
+
+</body>
+</html>

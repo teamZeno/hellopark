@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta http-equiv="refresh" content="30">
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/input_design.css" type="text/css"/>
+    <title>DashBoard - Provider</title>
+
+    <style>
+        input{
+            margin:8px;
+        }
+
+        table{
+            width: 50%;
+        }
+
+        th,td{
+            padding-left: 16px;
+        }
+
+        #tb_{
+            width: 100%;
+        }
+
+        #park_1{
+            width:50%;
+            margin:1%;
+        }
+
+
+        .st_t{
+            fill:#fff;
+                       
+        }
+
+        #st_bk{
+            width:100%;
+            position: fixed;
+            z-index: 10;
+            top:0px;
+            padding:1%;
+            background-color:rgba(0,0,0,0.4);
+            display:none;
+        }
+
+
+    </style>
+
+    <script src="js/parkViewCus.js"></script>
+
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">HelloPark</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup.html">Become Provider</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="signup.html" tabindex="-1" aria-disabled="true">Become Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="signIn.html">Login In</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+
+    <div></div>
+
+    <div class="border-danger rounded-pill p-1 m-5 text-center display-2" >
+        <label id="pr_v_name" >ABC Parking</label>
+    </div>
+
+    <div>
+    <!-- slot Current status -->
+    <div class="m-1 p-5" style="width:30%;float:right;">
+        <div>
+            <p class="display-4">Your Parking Status</p>
+        </div>
+
+        <div class="bg-success rounded-pill p-1 m-4 text-center t-x ">
+            <label>Available</label><label id="av_slot_v" class="pl-5 bold">00</label>
+        </div>
+
+        <div class="bg-warning rounded-pill p-1 m-4 text-center t-x" >
+            <label>Booked:</label><label class="pl-5" id="bk_slot_v">00</label>
+        </div>
+
+        <div class="bg-danger rounded-pill p-1 m-4 text-center t-x">
+            <label>Parked:</label><label class="pl-5"  id="pr_slot_v">00 </label>
+        </div>
+    </div>
+
+    <div class="m-4 p-4" >
+
+        <div>
+            <p class="display-4">Your Parking Slot</p>
+        </div>
+        <svg id="park_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 686.71 436.71"><defs><style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;}.st_t{font-size:57.81px;font-family:MyriadPro-Regular, Myriad Pro;}</style></defs><title>t</title>
+            <rect class="cls-1" x="0.5" y="0.5" width="685.71" height="435.71"/>
+            
+            <!-- Slot - 01 -->
+            <rect id="st1_"  class="cls-1" x="0.5" y="0.5" width="228.57" height="217.86" onclick="myf(this.id,1)" />
+            <text id="st1_t" class="st_t" transform="translate(81.76 126.87)">01</text>
+
+            <!-- Slot - 02 -->
+            <rect id="st2_" class="cls-1" x="229.07" y="0.5" width="228.57" height="217.86" onclick="myf(this.id,2)" />
+            <text id="st2_t" class="st_t" transform="translate(318.67 128.87)">02</text>
+
+            <!-- Slot - 03 -->
+            <rect id="st3_" class="cls-1" x="457.64" y="0.5" width="228.57" height="217.86" onclick="myf(this.id,3,)" />
+            <text id="st3_t" class="st_t" transform="translate(544.24 128.92)">03</text>
+
+            <!-- Slot - 04 -->
+            <rect id ="st4_" class="cls-1" x="0.5" y="218.36" width="228.57" height="217.86" onclick="myf(this.id,4)"/>
+            <text id="st4_t" class="st_t" transform="translate(82.38 344.75)">04</text>
+
+            <!-- Slot - 05 -->
+            <rect id="st5_" class="cls-1" x="229.07" y="218.36" width="228.57" height="217.86" onclick="myf(this.id,5)" />
+            <text id="st5_t" class="st_t" transform="translate(318.67 344.75)">05</text>
+
+            <!-- Slot - 06 -->
+            <rect id="st6_" class="cls-1" x="457.64" y="218.36" width="228.57" height="217.86" onclick="myf(this.id,6)" />
+            <text id="st6_t" class="st_t" transform="translate(544.24 344.75)">06</text>
+            
+        </svg>
+    </div>
+
+    </div>
+
+
+    <!-- Parking Place Main Details -->
+    <div class="m-2 p-5" style="width:30%;clear:both;">
+
+        <div>
+            <p class="display-4">Your Place info</p>
+        </div>
+
+        <div class="border-danger rounded-pill p-1 m-2" >
+            <label id="pr_v_name" >ABC Parking</label>
+        </div>
+    
+        <div class="border-primary p-1 m-2">
+            <labe id="pr_v_ad" >123/1,ABC Road , ABC</label>
+        </div>
+
+        <div class=" rounded-pill p-1 m-2">
+            <label id="pr_v_cont">011-2586584</label>
+        </div>
+    </div>    
+  
+
+    <!-- Slot - Booking-->
+    <div  id="st_bk">
+        <div style="background-color: rgba(225,225,225,1);padding:3%;width:40%;margin:2%;">
+                <div>
+                    <p class="display-4 text-center" id="st_bk_h2">Slot 00</p>
+                </div>
+        
+                <div>
+                    <form method="POST" action="#" name = "bk_form">
+                    <div class="form-group">
+                        <!-- Hidden -->
+                        <input type="hidden" name="park_id">
+                        <input type="hidden" name="slot_id">
+                        <input type="hidden" name="park_name">
+                        <input type="hidden" name="slot_name">
+                        <input type="hidden" name="charge">
+
+                        <!-- user info -->
+                        <input type="hidden" name="uid">
+                        <input type="hidden" name="uname">
+
+                        <!-- To Time-->
+                        <div>
+                            <label class="display-5">To ( Time ) </label>
+                            <input class="form-control rounded-pill " type="time" name="to_time" >
+                        </div>
+        
+                        <!-- From Time -->
+                        <div>
+                            <label>Form ( Time ) </label>
+                            <input class="form-control rounded-pill " type="time" name="from_time">
+                        </div>
+
+                        <div>
+                            <label>Vehicle Number </label>
+                            <input class="form-control rounded-pill " type="text" name="no_vehicle">
+                        </div>
+        
+                        <!-- Pay Method -->
+                        <div>
+                            <label>Payment Method </label>
+                            <select class="form-control rounded-pill " type="text" name="pay_mod" placeholder = "Payment Method">
+                                <option value="None">None</option>
+                                <option value="CASH">Cash</option>
+                                <option value="CARD">Card</option>
+                            </select>
+                        </div>
+            
+                        <!-- Button _ submit -->
+                        <div>
+                            <input class="btn btn-primary rounded-pill m-1 mt-3" style="width:30%;" type="button" name="sub_btn" value="Book" onclick="clickBook()">
+                        </div>
+        
+                        <!-- Button _ Cancel -->
+                        <div>
+                            <input class="btn btn-danger rounded-pill m-1" style="width:30%;" type= "button" name="cancel_btn" value="Cancel" onclick="cancelBook()">
+                        </div>
+                    </div>
+                    </form>
+                </div>
+        </div>  
+    </div>
+    
+    <!-- JS -->
+    <!--
+    <script src="js/parkViewCus.js"></script>
+    -->
+
+    <div style="display:none">
+        <div >
+           <label>User Name:</label><label id="u_name" > User </label> 
+        </div>
+        <div>
+           <label>User Id:</label><label id="u_id" >User Id </label> 
+        </div>
+    </div>
+
+
+</body>
+</html>
